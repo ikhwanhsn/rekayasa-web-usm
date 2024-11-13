@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\Validator;
 
 class WisataController extends Controller
 {
+    public function __construct()
+    {
+    $this->middleware('auth:api');
+    }
     // Menampilkan semua data wisata
     public function showAll()
     {
